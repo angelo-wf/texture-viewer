@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <title>Texture/sprite viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="left">
+    <p class="title">Data</p>
+    File: <input type="file" id="file">
+    Address: <input id="adr" value="0"><br>
+    Width: <input type="number" id="w" value="128">
+    Height: <input type="number" id="h" value="128">
+    Codec: <select id="codec">
+    </select>
+    <input type="checkbox" id="f"> Flip
+    <input type="checkbox" id="a"> No alpha<br>
+    Alpha color: <input id="acol" value="#ff00ff">
+    Scale: <select id="scale">
+      <option value="1">1x</option>
+      <option value="2">2x</option>
+      <option value="4">4x</option>
+    </select>
+    <input type="checkbox" id="key" checked> Key controls<br>
+    <div id="bg">
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+  <div id="right">
+    <p class="title">Palette</p>
+    <select id="paltype">
+      <option value="0">Grayscale</option>
+      <option value="1">Same as data</option>
+      <option value="2">Other file</option>
+    </select>
+    <input type="file" id="palfile"><br>
+    Address: <input id="paladr" value="0">
+    Codec: <select id="palcodec">
+    </select>
+    <input type="checkbox" id="pala"> No alpha<br>
+
+    <div id="palbg">
+      <canvas id="palcanvas" width="16" height="16"></canvas>
+    </div>
+  </div>
+
+  <script src="util.js"></script>
+  <script src="dxt.js"></script>
+  <script src="tiled.js"></script>
+  <script src="codecs.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
