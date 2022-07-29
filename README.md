@@ -47,4 +47,4 @@ These currently don't have the best names, but the general gist is as follows:
 
 ## Licence
 
-Licensed under the MIT licence, see `LICENSE` for details.
+Licensed under the MIT license, see `LICENSE` for details.
